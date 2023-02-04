@@ -37,18 +37,34 @@
 	$: venueType, gender, discipline, score = calc.evaluate(result)
 </script>
 
-<input type="radio" bind:group={venueType} value="outdoor">Outdoor
-<input type="radio" bind:group={venueType} value="indoor">Indoor
+<main>
+	<div class="radio">
+		<input type="radio" bind:group={venueType} value="outdoor">Outdoor
+		<input type="radio" bind:group={venueType} value="indoor">Indoor
+	</div>
 
-<input type="radio" bind:group={gender} value="m">M
-<input type="radio" bind:group={gender} value="f">F
+	<div class="radio">
+		<input type="radio" bind:group={gender} value="m">M
+		<input type="radio" bind:group={gender} value="f">F
+	</div>
 
-<select bind:value={discipline} >
-    {#each disciplines as disc}
-        <option value={disc}>{disc}</option>
-    {/each}
-</select>
+	<select bind:value={discipline} >
+		{#each disciplines as disc}
+			<option value={disc}>{disc}</option>
+		{/each}
+	</select>
 
-<input type="number" bind:value={result}>
+	<input type="number" bind:value={result}>
 
-Score: {score || ''}
+	Score: {score || ''}
+</main>
+
+<style>
+	main {
+		max-width: 20rem;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+</style>
