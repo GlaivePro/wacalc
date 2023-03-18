@@ -1,5 +1,6 @@
 <script>
 	import { WaCalculator } from '@glaivepro/wa-calculator'
+	import FrInput from './FrInput.svelte'
 
 	// Local calc options
 	/** @type string|null */
@@ -54,7 +55,7 @@
 		{/each}
 	</select>
 
-	<input type="number" bind:value={result}>
+	<FrInput bind:value={result} />
 
 	Score: {score || ''}
 </section>
