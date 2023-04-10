@@ -5,6 +5,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
+			'$lib': 'src/lib',
 			'$comp': 'src/components',
 			'$style': 'src/style',
 		},
